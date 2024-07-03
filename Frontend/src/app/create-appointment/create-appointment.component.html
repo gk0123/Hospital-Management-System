@@ -1,0 +1,78 @@
+<nav style="margin: auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color: white" class="navbar-brand" href="#">Ramnath HOSPITALS</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a
+          style="color: white"
+          class="nav-link active"
+          aria-current="page"
+          href="javascript:void(0);"
+          routerLink="/appointmentlist"
+          >Back</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <h2>Add New Appointment</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        placeholder="Enter name"
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        id="age"
+        name="age"
+        placeholder="Enter age"
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.age"
+      />
+    </div>
+    <div class="form-group">
+      <label for="symptoms">Symptoms</label>
+      <input
+        id="symptoms"
+        name="symptoms"
+        placeholder="Enter symptoms"
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.symptoms"
+      />
+    </div>
+    <div class="form-group">
+      <label for="number">Number</label>
+      <input
+        id="number"
+        name="number"
+        placeholder="Enter number"
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.number"
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
